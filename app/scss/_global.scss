@@ -11,6 +11,19 @@ html{
 body{
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 32px;
+  margin-left: 32px;
+  color: $VeryDarkBlue;
+  background-color: $VeryLightGray;
+
+  @include breakpoint-up(small){
+  }
 }
 
 .attribution {
