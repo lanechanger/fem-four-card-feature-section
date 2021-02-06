@@ -8,34 +8,70 @@ main{
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
   border-radius: 8px;
   height: 222px;
-  padding-top: 27px;
-  padding-left: 28px;
   margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
 
   &__header{
-    font-size: 20px;
-    line-height: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 27px;
+      margin-left: 28px;
   }
 
   &__desc{
     font-size: 13px;
     line-height: 23px;
     letter-spacing: 0.0902778px;
+    margin-left: 29px;
+  }
+
+  div{
+    height: 3.55px;
+    width: 100%;
+    position: absolute;
+
+    &::before{
+      content: "";
+      position: absolute;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      top: 137px;
+      left: 226px;
+      height: 57px;
+      width: 57px;
+    }
   }
 
   &--supervisor{
+    background-color: $Cyan;
 
+    &::before{
+      background-image: url("/images/icon-supervisor.svg");
+    }
   }
 
   &--team{
+    background-color: $Red;
 
+    &::before{
+      background-image: url("/images/icon-team-builder.svg");
+    }
   }
 
   &--karma{
+    background-color: $Orange;
 
+    &::before{
+      background-image: url("/images/icon-karma.svg");
+    }
   }
 
   &--calculator{
-    
+    background-color: $Blue;
+
+    &::before{
+      background-image: url("/images/icon-calculator.svg");
+    }
   }
 }
