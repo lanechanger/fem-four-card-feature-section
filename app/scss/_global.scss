@@ -19,8 +19,11 @@ body{
   align-items: center;
   margin-right: 32px;
   margin-left: 32px;
+  padding-top: 85px;
+  padding-bottom: 78px;
   color: $VeryDarkBlue;
   background-color: $VeryLightGray;
+  position: relative;
 
   @include breakpoint-up(small){
   }
@@ -34,11 +37,13 @@ body{
   opacity: 0.5;
 }
 
-.attribution {
+footer {
   font-size: 11px;
   text-align: center;
-}
+  position: absolute;
+  bottom: 1rem;
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  a {
+    color: hsl(228, 45%, 44%);
+  }
 }
