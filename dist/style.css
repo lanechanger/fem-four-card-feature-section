@@ -106,7 +106,7 @@ main {
   }
 }
 
-main > section:last-child {
+main > .card:last-child {
   margin-bottom: 0px;
 }
 
