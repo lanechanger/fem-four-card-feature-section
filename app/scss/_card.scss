@@ -1,6 +1,11 @@
 main{
   display: flex;  
   flex-direction: column;
+
+  @include breakpoint-up(medium){
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .card{
@@ -8,15 +13,28 @@ main{
   box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
   border-radius: 8px;
   height: 222px;
+  max-width: 350px;
   margin-bottom: 25px;
   position: relative;
   overflow: hidden;
+  
+  @include breakpoint-up(medium){
+    height: 250px;
+    margin-bottom: 0px;
+  }
 
   &__header{
       font-size: 20px;
       line-height: 30px;
       margin-top: 27px;
       margin-left: 28px;
+      padding-bottom: 1px;
+
+      @include breakpoint-up(medium){
+        margin-left: 32px;
+        margin-right: 32px;
+        padding-bottom: 6px;
+      }
   }
 
   &__desc{
@@ -24,12 +42,22 @@ main{
     line-height: 23px;
     letter-spacing: 0.0902778px;
     margin-left: 29px;
+    margin-right: 28px;
+
+    @include breakpoint-up(medium){
+      margin-left: 32px;
+      margin-right: 32px;
+    }
   }
 
   div{
     height: 3.55px;
     width: 100%;
     position: absolute;
+
+    @include breakpoint-up(medium){
+      height: 4px;
+    }
 
     &::before{
       content: "";
@@ -40,6 +68,13 @@ main{
       left: 226px;
       height: 57px;
       width: 57px;
+
+      @include breakpoint-up(medium){
+        top: 154px;
+        left: 254px;
+        height: 64px;
+        width: 64px;
+      }
     }
   }
 
@@ -72,6 +107,19 @@ main{
 
     &::before{
       background-image: url("/images/icon-calculator.svg");
+    }
+  }
+
+  &--vertical-group{
+    >section:first-child{
+      @include breakpoint-up(medium){
+        margin-bottom: 30px;
+      }
+    }
+
+    @include breakpoint-up(medium){
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 }
