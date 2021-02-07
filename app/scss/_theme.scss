@@ -1,0 +1,83 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: $VeryDarkBlue;
+  background-color: $VeryLightGray;
+}
+
+footer {
+  font-size: 11px;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.head{
+  &__header{
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.166667px;
+
+    @include breakpoint-up(large){
+      font-size: 36px;
+      line-height: 54px;
+      letter-spacing: 0.25px;
+    }
+  }
+
+  &__desc{
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.104167px;
+  }
+}
+
+.card{
+  background: #FFFFFF;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 8px;
+
+  &__header{
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__desc{
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.0902778px;
+  }
+
+  &--supervisor{
+    background-color: $Cyan;
+
+    &::before{
+      background-image: url("/images/icon-supervisor.svg");
+    }
+  }
+
+  &--team{
+    background-color: $Red;
+
+    &::before{
+      background-image: url("/images/icon-team-builder.svg");
+    }
+  }
+
+  &--karma{
+    background-color: $Orange;
+
+    &::before{
+      background-image: url("/images/icon-karma.svg");
+    }
+  }
+
+  &--calculator{
+    background-color: $Blue;
+
+    &::before{
+      background-image: url("/images/icon-calculator.svg");
+    }
+  }
+}

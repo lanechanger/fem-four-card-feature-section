@@ -17,9 +17,6 @@ main{
 }
 
 .card{
-  background: #FFFFFF;
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-  border-radius: 8px;
   height: 222px;
   max-width: 350px;
   margin-bottom: 25px;
@@ -33,8 +30,6 @@ main{
   }
 
   &__header{
-      font-size: 20px;
-      line-height: 30px;
       margin-top: 27px;
       margin-left: 28px;
       padding-bottom: 1px;
@@ -47,9 +42,6 @@ main{
   }
 
   &__desc{
-    font-size: 13px;
-    line-height: 23px;
-    letter-spacing: 0.0902778px;
     margin-left: 29px;
     margin-right: 28px;
 
@@ -84,38 +76,6 @@ main{
         height: 64px;
         width: 64px;
       }
-    }
-  }
-
-  &--supervisor{
-    background-color: $Cyan;
-
-    &::before{
-      background-image: url("/images/icon-supervisor.svg");
-    }
-  }
-
-  &--team{
-    background-color: $Red;
-
-    &::before{
-      background-image: url("/images/icon-team-builder.svg");
-    }
-  }
-
-  &--karma{
-    background-color: $Orange;
-
-    &::before{
-      background-image: url("/images/icon-karma.svg");
-    }
-  }
-
-  &--calculator{
-    background-color: $Blue;
-
-    &::before{
-      background-image: url("/images/icon-calculator.svg");
     }
   }
 
