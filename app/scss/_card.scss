@@ -3,6 +3,10 @@ main{
   flex-direction: column;
 
   @include breakpoint-up(medium){
+    align-items: center;
+  }
+
+  @include breakpoint-up(large){
     flex-direction: row;
     align-items: center;
   }
@@ -18,9 +22,10 @@ main{
   position: relative;
   overflow: hidden;
   
-  @include breakpoint-up(medium){
+  @include breakpoint-up(large){
     height: 250px;
     margin-bottom: 0px;
+    flex: 1;
   }
 
   &__header{
@@ -30,7 +35,7 @@ main{
       margin-left: 28px;
       padding-bottom: 1px;
 
-      @include breakpoint-up(medium){
+      @include breakpoint-up(large){
         margin-left: 32px;
         margin-right: 32px;
         padding-bottom: 6px;
@@ -44,7 +49,7 @@ main{
     margin-left: 29px;
     margin-right: 28px;
 
-    @include breakpoint-up(medium){
+    @include breakpoint-up(large){
       margin-left: 32px;
       margin-right: 32px;
     }
@@ -55,7 +60,7 @@ main{
     width: 100%;
     position: absolute;
 
-    @include breakpoint-up(medium){
+    @include breakpoint-up(large){
       height: 4px;
     }
 
@@ -65,13 +70,13 @@ main{
       background-size: 100%;
       background-repeat: no-repeat;
       top: 137px;
-      left: 226px;
+      left: 72.69%;
       height: 57px;
       width: 57px;
 
-      @include breakpoint-up(medium){
+      @include breakpoint-up(large){
         top: 154px;
-        left: 254px;
+        left: 72.57%;
         height: 64px;
         width: 64px;
       }
@@ -110,16 +115,37 @@ main{
     }
   }
 
-  &--vertical-group{
-    >section:first-child{
+  &--group{
+    // this is for when the group is horizontal
+    @include breakpoint-up(medium){
+      display:flex;
+    }
+    
+    >section{
       @include breakpoint-up(medium){
-        margin-bottom: 30px;
+        flex: 1;
       }
     }
 
-    @include breakpoint-up(medium){
+    >section:first-child{
+      @include breakpoint-up(medium){
+        margin-right: 20px;
+      }
+    }
+
+    // this is for when the group is vertical
+    @include breakpoint-up(large){
+      display: block;
       padding-left: 30px;
       padding-right: 30px;
+      flex: 1;
+    }
+
+    >section:first-child{
+      @include breakpoint-up(large){
+        margin-bottom: 30px;
+        margin-right: 0px;
+      }
     }
   }
 }

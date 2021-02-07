@@ -2,7 +2,7 @@
   text-align: center;
   padding-bottom: 76px;
 
-  @include breakpoint-up(medium){
+  @include breakpoint-up(large){
     padding-bottom: 64px;
     min-width: 540px;
     width: 37.5%;
@@ -15,7 +15,7 @@
     letter-spacing: 0.166667px;
     padding-bottom: 13px;
 
-    @include breakpoint-up(medium){
+    @include breakpoint-up(large){
       font-size: 36px;
       line-height: 54px;
       letter-spacing: 0.25px;
