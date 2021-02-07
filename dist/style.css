@@ -29,14 +29,6 @@ body {
   }
 }
 
-.semi-bold {
-  font-weight: 600;
-}
-
-.half-opaque {
-  opacity: 0.5;
-}
-
 footer {
   bottom: 1rem;
   position: absolute;
@@ -209,6 +201,14 @@ footer {
 
 footer a {
   color: #3e52a3;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.half-opaque {
+  opacity: 0.5;
 }
 
 .head__header {
