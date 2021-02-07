@@ -107,11 +107,11 @@ main{
             -ms-flex: 1;
                 flex: 1;
       }
-    }
 
-    >section:first-child{
-      @include breakpoint-up(medium){
-        margin-right: 1.25rem;
+      &:first-child{
+        @include breakpoint-up(medium){
+          margin-right: 1.25rem;
+        }
       }
     }
 
