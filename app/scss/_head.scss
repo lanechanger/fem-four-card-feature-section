@@ -1,10 +1,10 @@
 .head{
-  text-align: center;
   padding-bottom: 76px;
+  text-align: center;
 
   @include breakpoint-up(large){
-    padding-bottom: 64px;
     min-width: 540px;
+    padding-bottom: 64px;
     width: 37.5%;
   }
 

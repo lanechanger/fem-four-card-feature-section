@@ -1,14 +1,26 @@
 main{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;  
-  flex-direction: column;
+  -webkit-box-orient: vertical;  
+  -webkit-box-direction: normal;  
+      -ms-flex-direction: column;  
+          flex-direction: column;
 
   @include breakpoint-up(medium){
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   @include breakpoint-up(large){
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 
   >.card:last-child{
@@ -18,20 +30,22 @@ main{
 
 .card{
   height: 222px;
-  max-width: 350px;
   margin-bottom: 25px;
-  position: relative;
+  max-width: 350px;
   overflow: hidden;
+  position: relative;
   
   @include breakpoint-up(large){
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     height: 250px;
     margin-bottom: 0px;
-    flex: 1;
   }
 
   &__header{
-      margin-top: 27px;
       margin-left: 28px;
+      margin-top: 27px;
       padding-bottom: 1px;
 
       @include breakpoint-up(large){
@@ -53,27 +67,27 @@ main{
 
   div{
     height: 3.55px;
-    width: 100%;
     position: absolute;
+    width: 100%;
 
     @include breakpoint-up(large){
       height: 4px;
     }
 
     &::before{
-      content: "";
-      position: absolute;
-      background-size: 100%;
       background-repeat: no-repeat;
-      top: 137px;
-      left: 72.69%;
+      background-size: 100%;
+      content: "";
       height: 57px;
+      left: 72.69%;
+      position: absolute;
+      top: 137px;
       width: 57px;
 
       @include breakpoint-up(large){
-        top: 154px;
-        left: 72.57%;
         height: 64px;
+        left: 72.57%;
+        top: 154px;
         width: 64px;
       }
     }
@@ -82,12 +96,16 @@ main{
   &--group{
     // this is for when the group is horizontal
     @include breakpoint-up(medium){
+      display:-webkit-box;
+      display:-ms-flexbox;
       display:flex;
     }
     
     >section{
       @include breakpoint-up(medium){
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
       }
     }
 
@@ -100,9 +118,11 @@ main{
     // this is for when the group is vertical
     @include breakpoint-up(large){
       display: block;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       padding-left: 30px;
       padding-right: 30px;
-      flex: 1;
     }
 
     >section:first-child{
