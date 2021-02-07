@@ -2,11 +2,11 @@ body{
   background-color: $VeryLightGray;
   color: $VeryDarkBlue;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 footer {
-  font-size: 11px;
+  font-size: 0.6875rem;
   a {
     color: hsl(228, 45%, 44%);
   }
@@ -22,39 +22,39 @@ footer {
 
 .head{
   &__header{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 200;
-    letter-spacing: 0.166667px;
-    line-height: 36px;
+    letter-spacing: 0.0104rem;
+    line-height: 2.25rem;
 
     @include breakpoint-up(large){
-      font-size: 36px;
-      letter-spacing: 0.25px;
-      line-height: 54px;
+      font-size: 2.25rem;
+      letter-spacing: 0.0156rem;
+      line-height: 3.375rem;
     }
   }
 
   &__desc{
-    font-size: 15px;
-    letter-spacing: 0.104167px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    letter-spacing: 0.0065rem;
+    line-height: 1.5625rem;
   }
 }
 
 .card{
   background: #FFFFFF;
-  border-radius: 8px;
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.9375rem 1.875rem -0.6875rem rgba(131, 166, 210, 0.5);
 
   &__header{
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
   }
 
   &__desc{
-    font-size: 13px;
-    letter-spacing: 0.0902778px;
-    line-height: 23px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.0056rem;
+    line-height: 1.4375rem;
   }
 
   &--supervisor{
